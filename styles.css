@@ -37,6 +37,22 @@ nav .logo {
     letter-spacing: 2px;
 }
 
+nav .logo a {
+    color: #64ffda; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    font-family: 'Syne', sans-serif; /* Police de caractères */
+    font-size: 24px; /* Taille de la police */
+    font-weight: 700; /* Poids de la police */
+    text-transform: uppercase; /* Texte en majuscules */
+    letter-spacing: 2px; /* Espacement des lettres */
+    transition: color 0.3s ease, transform 0.3s ease; /* Animation au survol */
+}
+
+nav .logo a:hover {
+    color: #ccd6f6; /* Changement de couleur au survol */
+    transform: translateY(-2px); /* Légère translation vers le haut */
+}
+
 /* Liens de navigation */
 .nav-links {
     list-style: none;
