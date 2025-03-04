@@ -1,0 +1,651 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(135deg, #0a192f, #172a45);
+    color: #ccd6f6;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(10, 25, 47, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #64ffda;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Liens de navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #64ffda;
+    transform: translateY(-2px);
+}
+
+/* Menu Burger */
+.menu-toggle {
+    display: none; /* Masqué par défaut sur les grands écrans */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: #64ffda;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 200px 10%;
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.5), rgba(10, 25, 47, 0.6)), url('background.jpg') center/cover;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Prend toute la hauteur de l'écran */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.2); /* Overlay encore plus léger */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    color: #ccd6f6;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #8892b0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+.hero .btn-hero {
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid #64ffda;
+    color: #64ffda;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+}
+
+.hero .btn-hero:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(100, 255, 218, 0.5);
+}
+
+section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ccd6f6;
+}
+
+/* À Propos */
+/* Section À Propos */
+.about {
+    background: rgba(10, 25, 47, 0.9);
+    padding: 100px 10%;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ccd6f6;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espace entre le texte et l'image */
+}
+
+.about-text {
+    flex: 1;
+    max-width: 60%;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #8892b0;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #64ffda; /* Couleur des icônes */
+}
+
+.contact-info span {
+    color: #ccd6f6; /* Couleur du texte */
+}
+
+.about-image {
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%; /* Image ronde */
+    border: 4px solid #64ffda; /* Bordure colorée */
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2); /* Ombre légère */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+    box-shadow: 0 15px 40px rgba(100, 255, 218, 0.3); /* Ombre plus prononcée */
+}
+
+
+
+/* Photo de profil redesign */
+.profile-picture {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 40px;
+    border: 4px solid #64ffda;
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(100, 255, 218, 0.3);
+}
+
+/* Compétences */
+.skills {
+    background: rgba(10, 25, 47, 0.9);
+    padding: 100px 10%;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.skills .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: rgba(100, 255, 218, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #64ffda;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ccd6f6;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #8892b0;
+}
+
+/* Portfolio */
+.portfolio {
+    background: rgba(10, 25, 47, 0.9);
+    padding: 100px 10%;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(100, 255, 218, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ccd6f6;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #8892b0;
+    margin-bottom: 20px;
+}
+
+.btn-portfolio {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #64ffda;
+    color: #64ffda;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-portfolio:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Contact */
+.contact {
+    background: rgba(10, 25, 47, 0.9);
+    padding: 100px 10%;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(100, 255, 218, 0.05);
+    color: #ccd6f6;
+    font-size: 1rem;
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+    color: #8892b0;
+}
+
+.contact button {
+    padding: 15px;
+    background: transparent;
+    border: 2px solid #64ffda;
+    color: #64ffda;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 25, 47, 0.9);
+    padding: 20px 10%;
+    text-align: center;
+    margin-top: 100px;
+    backdrop-filter: blur(10px);
+}
+
+footer p {
+    color: #8892b0;
+}
+
+footer .social-icons {
+    margin-top: 20px;
+}
+
+footer .social-icons a {
+    color: #64ffda;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ccd6f6;
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+/* Styles de base pour le menu burger */
+.menu-toggle {
+    display: none; /* Masqué par défaut sur les grands écrans */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: #64ffda;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Styles pour le mode responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Masquer les liens par défaut */
+        flex-direction: column;
+        background: rgba(10, 25, 47, 0.95);
+        position: absolute;
+        top: 70px; /* Ajustez en fonction de la hauteur de votre navbar */
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex; /* Afficher les liens lorsque le menu est actif */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: flex; /* Afficher le menu burger en mode responsive */
+    }
+
+    /* Animation du menu burger en croix */
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* Styles spécifiques pour l'iPhone XR (414px de largeur) */
+/* Styles spécifiques pour l'iPhone XR (414px de largeur) */
+@media (max-width: 414px) {
+    /* Navbar */
+    nav {
+        padding: 15px 5%; /* Réduire le padding pour les petits écrans */
+    }
+
+    nav .logo {
+        font-size: 20px; /* Réduire la taille du logo */
+    }
+
+    /* Liens de navigation */
+    .nav-links li {
+        margin-left: 20px; /* Réduire l'espacement entre les liens */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Réduire la taille des liens */
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 5%; /* Ajuster le padding pour les petits écrans */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Réduire la taille du titre */
+    }
+
+    .hero .subtitle {
+        font-size: 1rem; /* Réduire la taille du sous-titre */
+    }
+
+    .hero .btn-hero {
+        padding: 10px 20px; /* Réduire la taille des boutons */
+        font-size: 14px; /* Réduire la taille du texte des boutons */
+    }
+
+    /* Sections générales */
+    section h2 {
+        font-size: 2rem; /* Réduire la taille des titres de section */
+    }
+
+    /* À Propos */
+    .about {
+        padding: 50px 5%; /* Réduire le padding pour les petits écrans */
+    }
+
+    .about .about-content p {
+        font-size: 1rem; /* Réduire la taille du texte */
+    }
+
+    /* Photo de profil */
+    .profile-picture {
+        width: 150px; /* Réduire la taille de la photo de profil */
+        height: 150px;
+    }
+
+    /* Compétences */
+    .skills {
+        padding: 50px 5%; /* Réduire le padding pour les petits écrans */
+    }
+
+    .skills .grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuster la grille */
+    }
+
+    .skill-card {
+        padding: 20px; /* Réduire le padding des cartes */
+    }
+
+    .skill-card i {
+        font-size: 2rem; /* Réduire la taille des icônes */
+    }
+
+    .skill-card h3 {
+        font-size: 1.2rem; /* Réduire la taille des titres */
+    }
+
+    .skill-card p {
+        font-size: 0.9rem; /* Réduire la taille du texte */
+    }
+
+    /* Portfolio */
+    .portfolio {
+        padding: 50px 5%; /* Réduire le padding pour les petits écrans */
+    }
+
+    .portfolio .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuster la grille */
+    }
+
+    .card img {
+        height: 150px; /* Réduire la hauteur des images */
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem; /* Réduire la taille des titres */
+    }
+
+    .card-content p {
+        font-size: 0.9rem; /* Réduire la taille du texte */
+    }
+
+    .btn-portfolio {
+        padding: 8px 16px; /* Réduire la taille des boutons */
+        font-size: 14px; /* Réduire la taille du texte des boutons */
+    }
+
+    /* Contact */
+    .contact {
+        padding: 50px 5%; /* Réduire le padding pour les petits écrans */
+    }
+
+    .contact input, .contact textarea {
+        padding: 10px; /* Réduire le padding des champs de formulaire */
+        font-size: 14px; /* Réduire la taille du texte */
+    }
+
+    .contact button {
+        padding: 10px; /* Réduire la taille des boutons */
+        font-size: 14px; /* Réduire la taille du texte des boutons */
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px 5%; /* Réduire le padding pour les petits écrans */
+    }
+
+    footer p {
+        font-size: 14px; /* Réduire la taille du texte */
+    }
+
+    footer .social-icons a {
+        font-size: 1.2rem; /* Réduire la taille des icônes sociales */
+    }
+}
