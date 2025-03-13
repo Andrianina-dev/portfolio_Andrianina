@@ -665,3 +665,19 @@ footer .social-icons a:hover {
         font-size: 1.2rem; /* Réduire la taille des icônes sociales */
     }
 }
+
+/* Style pour les icônes de compétences */
+.skill-card i, .skill-card img {
+    width: 50px; /* Taille fixe pour toutes les icônes */
+    height: 50px; /* Taille fixe pour toutes les icônes */
+    font-size: 50px; /* Taille des icônes Font Awesome */
+    margin-bottom: 15px; /* Espacement entre l'icône et le texte */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style spécifique pour les images (Java, Laravel, PHP) */
+.skill-card img {
+    object-fit: contain; /* Assure que les images ne sont pas déformées */
+}
