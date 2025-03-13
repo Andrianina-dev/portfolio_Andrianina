@@ -39,52 +39,89 @@
         </div>
     </header>
 
-    
-<!-- Section À Propos -->
-<section id="about" class="about">
-    <div class="container">
-        <h2>À Propos de Moi</h2>
-        <div class="about-content">
-            <!-- Partie texte -->
-            <div class="about-text">
-                <p>Je suis <strong>RANDRIANTAHIANA Henitsoa Andrianina</strong>, un designer graphique et développeur de logiciels passionné, actuellement étudiant à l'IT University. Avec une solide expérience en conception visuelle et en développement logiciel, je crée des solutions innovantes et esthétiques pour répondre aux besoins de mes clients.</p>
-                <ul class="contact-info">
-                    <li>
-                        <i class="fas fa-phone-alt"></i> <!-- Icône pour le téléphone -->
-                        <span>038 24 590 94</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i> <!-- Icône pour l'e-mail -->
-                        <span>andrianinarandria001@hotmail.com</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i> <!-- Icône pour l'adresse -->
-                        <span>LOT IAV 249 Iavoloha, Antananarivo, Madagascar</span>
-                    </li>
-                </ul>
-            </div>
-            <!-- Partie image -->
-            <div class="about-image">
-                <img src="profile.jpg" alt="Photo de profil">
+    <!-- Section À Propos -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À Propos de Moi</h2>
+            <div class="about-content">
+                <!-- Partie texte -->
+                <div class="about-text">
+                    <p>Je suis <strong>RANDRIANTAHIANA Henitsoa Andrianina</strong>, un designer graphique et développeur de logiciels passionné, actuellement étudiant à l'IT University. Avec une solide expérience en conception visuelle et en développement logiciel, je crée des solutions innovantes et esthétiques pour répondre aux besoins de mes clients.</p>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone-alt"></i> <!-- Icône pour le téléphone -->
+                            <span>038 24 590 94</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i> <!-- Icône pour l'e-mail -->
+                            <span>andrianinarandria001@hotmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> <!-- Icône pour l'adresse -->
+                            <span>LOT IAV 249 Iavoloha, Antananarivo, Madagascar</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Partie image -->
+                <div class="about-image">
+                    <img src="profile.jpg" alt="Photo de profil">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Section Compétences -->
     <section id="skills" class="skills">
         <div class="container">
             <h2>Mes Compétences</h2>
             <div class="grid">
+                <!-- Design Graphique -->
                 <div class="skill-card">
                     <i class="fas fa-palette"></i>
                     <h3>Design Graphique</h3>
                     <p>Création de logos, interfaces utilisateur, et illustrations.</p>
                 </div>
+                <!-- Développement Logiciel -->
                 <div class="skill-card">
                     <i class="fas fa-laptop-code"></i>
                     <h3>Développement Logiciel</h3>
                     <p>Conception et développement d'applications web et mobiles.</p>
+                </div>
+                <!-- Java -->
+                <div class="skill-card">
+                    <img src="images/icons/java-icon.png" alt="Java Icon" class="skill-icon">
+                    <h3>Java</h3>
+                    <p>Développement d'applications backend et logiques métiers.</p>
+                </div>
+                <!-- Laravel -->
+                <div class="skill-card">
+                    <img src="images/icons/laravel-icon.png" alt="Laravel Icon" class="skill-icon">
+                    <h3>Laravel</h3>
+                    <p>Création d'applications web robustes et sécurisées.</p>
+                </div>
+                <!-- PHP -->
+                <div class="skill-card">
+                    <img src="images/icons/php-icon.png" alt="PHP Icon" class="skill-icon">
+                    <h3>PHP</h3>
+                    <p>Développement de sites web dynamiques et interactifs.</p>
+                </div>
+                <!-- JavaScript -->
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>Création d'interfaces utilisateur interactives.</p>
+                </div>
+                <!-- HTML5 -->
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Structuration et sémantique des pages web.</p>
+                </div>
+                <!-- CSS3 -->
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Stylisation et design des interfaces web.</p>
                 </div>
             </div>
         </div>
@@ -128,11 +165,7 @@
             </div>
         </div>
     </section>
-    <script>
-        (function() {
-            emailjs.init("13XC_NTrHAbIsYDpv"); // Remplacez par votre User ID
-        })();
-    </script>
+
     <!-- Section Contact -->
     <section id="contact" class="contact">
         <div class="container">
@@ -144,34 +177,6 @@
                 <button type="submit">Envoyer</button>
             </form>
         </div>
-    
-        <script>
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault(); // Empêche le rechargement de la page
-    
-                // Récupère les données du formulaire
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-    
-                // Paramètres pour EmailJS
-                const templateParams = {
-                    from_name: name,
-                    from_email: email,
-                    message: message,
-                };
-    
-                // Envoie l'e-mail
-                emailjs.send('andrianina_id', 'Andrianina_email_id', templateParams)
-                    .then(function(response) {
-                        alert('Votre message a été envoyé avec succès !');
-                        document.getElementById('contact-form').reset(); // Réinitialise le formulaire
-                    }, function(error) {
-                        alert('Une erreur s\'est produite. Veuillez réessayer.');
-                        console.error('Erreur :', error);
-                    });
-            });
-        </script>
     </section>
 
     <!-- Footer -->
@@ -190,5 +195,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        (function() {
+            emailjs.init("13XC_NTrHAbIsYDpv"); // Remplacez par votre User ID
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche le rechargement de la page
+
+            // Récupère les données du formulaire
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Paramètres pour EmailJS
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message,
+            };
+
+            // Envoie l'e-mail
+            emailjs.send('andrianina_id', 'Andrianina_email_id', templateParams)
+                .then(function(response) {
+                    alert('Votre message a été envoyé avec succès !');
+                    document.getElementById('contact-form').reset(); // Réinitialise le formulaire
+                }, function(error) {
+                    alert('Une erreur s\'est produite. Veuillez réessayer.');
+                    console.error('Erreur :', error);
+                });
+        });
+    </script>
 </body>
 </html>
